@@ -27,7 +27,6 @@ class PhotoDetailsViewController: UIViewController {
             let originalSize = photo["original_size"] as! [String: Any]
             let urlString = originalSize["url"] as! String
             let url = URL(string: urlString)
-            //self.photoURL = urlString
             detailsImageView.af_setImage(withURL: url!)}
 
         // Do any additional setup after loading the view.

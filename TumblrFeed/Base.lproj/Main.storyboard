@@ -30,12 +30,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="2s5-on-By0">
-                                                    <rect key="frame" x="0.0" y="-13" width="342" height="265"/>
+                                                    <rect key="frame" x="0.0" y="-13" width="377" height="265"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.66507628600000002" green="0.54584460099999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="pictureView" destination="2s5-on-By0" id="EMU-UK-I14"/>
                                             <segue destination="sF8-oa-ix2" kind="push" id="vIW-je-9M8"/>
