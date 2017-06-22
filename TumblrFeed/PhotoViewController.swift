@@ -14,6 +14,7 @@ class PhotoViewController: UIViewController,UITableViewDataSource, UITableViewDe
     var posts: [[String: Any]] = []
     
     @IBOutlet weak var tableView: UITableView!
+    //var photoURL : String = ""
     
     
     
@@ -59,6 +60,7 @@ class PhotoViewController: UIViewController,UITableViewDataSource, UITableViewDe
             let originalSize = photo["original_size"] as! [String: Any]
             let urlString = originalSize["url"] as! String
             let url = URL(string: urlString)
+            //self.photoURL = urlString
             cell.pictureView.af_setImage(withURL: url!)
             
             
@@ -76,10 +78,16 @@ class PhotoViewController: UIViewController,UITableViewDataSource, UITableViewDe
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         let vc = segue.destination as! PhotoDetailsViewController
+         let cell = sender as! UITableViewCell
+         let indexPath = tableView.indexPath(for: cell)!
+         let post = posts[indexPath.row]
+         vc.post = post        
+        
+    }
+   
 
 }
